@@ -26,7 +26,7 @@ dataset:
 model:
   hidden_dim: 768 # base 768, large 1024
   #embedding_dim: 1024 # ignored
-  model_type: BERT-disk # BERT-disk, ELMo-disk, 
+  model_type: ELMo-disk # BERT-disk, ELMo-disk, 
   use_disk: True
   model_layer: 0 # BERT-base: {1,...,12}; ELMo: {1,2,3}
 probe:
