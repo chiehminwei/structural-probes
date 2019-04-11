@@ -13,15 +13,15 @@ dataset:
      - embeddings
   corpus:
     root: data/
-    train_path: tmp-train.conllu
-    dev_path: tmp-dev.conllu
-    test_path: tmp-test.conllu
+    train_path: train.conllx
+    dev_path: dev.conllx
+    test_path: test.conllx
   embeddings:
     type: subword #{token,subword}, ignored
     root: data/ 
-    train_path: tmp-train.bert-layers.hdf5
-    dev_path: tmp-dev.bert-layers.hdf5
-    test_path: tmp-test.bert-layers.hdf5
+    train_path: train.bert-layers.hdf5
+    dev_path: dev.bert-layers.hdf5
+    test_path: test.bert-layers.hdf5
   batch_size: 20
 model:
   hidden_dim: 768 # base 768, large 1024

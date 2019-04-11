@@ -13,9 +13,9 @@ dataset:
      - embeddings
   corpus:
     root: data/
-    train_path: train.conllu
-    dev_path: dev.conllu
-    test_path: test.conllu
+    train_path: train.conllx
+    dev_path: dev.conllx
+    test_path: test.conllx
   embeddings:
     type: subword #{token,subword}, ignored
     root: data/ 
