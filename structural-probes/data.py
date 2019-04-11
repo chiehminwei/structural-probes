@@ -173,6 +173,9 @@ class SimpleDataset:
       observation = observations[index]
       feature_stack = hf[str(index)].value
       single_layer_features = feature_stack[layer_index]
+      print(single_layer_features.shape)
+      print(observation.sentence)
+      print(len(observation.sentence))
       assert single_layer_features.shape[0] == len(observation.sentence)
       single_layer_features_list.append(single_layer_features)
     return single_layer_features_list
