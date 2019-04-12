@@ -395,17 +395,22 @@ class BERTDataset(SubwordDataset):
       untokenized_sent = observation.sentence
       untok_tok_mapping = self.match_tokenized_to_untokenized(tokenized_sent, untokenized_sent)
       
-      print(single_layer_features.shape)
-      print(len(tokenized_sent))
-      print(single_layer_features)
-      print(tokenized_sent)
+      if index < 10:
+        print('round 1')
+        print(single_layer_features.shape)
+        print(len(tokenized_sent))
+        print(single_layer_features)
+        print(tokenized_sent)
 
       assert single_layer_features.shape[0] == len(tokenized_sent)
       single_layer_features = torch.tensor([np.mean(single_layer_features[untok_tok_mapping[i][0]:untok_tok_mapping[i][-1]+1,:], axis=0) for i in range(len(untokenized_sent))])
-      print(single_layer_features.shape)
-      print(len(observation.sentence))
-      print(single_layer_features)
-      print(observation.sentence)
+      
+      if index < 10:
+        print('round 2')
+        print(single_layer_features.shape)
+        print(len(observation.sentence))
+        print(single_layer_features)
+        print(observation.sentence)
       
       assert single_layer_features.shape[0] == len(observation.sentence)
       single_layer_features_list.append(single_layer_features)
