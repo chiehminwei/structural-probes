@@ -401,7 +401,6 @@ class BERTDataset(SubwordDataset):
         print('round 1')
         print(single_layer_features.shape)
         print(len(tokenized_sent))
-        print(single_layer_features)
         print(tokenized_sent)
 
       assert single_layer_features.shape[0] == len(tokenized_sent)
@@ -412,7 +411,6 @@ class BERTDataset(SubwordDataset):
         print('round 2')
         print(single_layer_features.shape)
         print(len(observation.sentence))
-        print(single_layer_features)
         print(observation.sentence)
       
       assert single_layer_features.shape[0] == len(observation.sentence)
