@@ -392,12 +392,12 @@ class BERTDataset(SubwordDataset):
       observation = observations[index]
       feature_stack = hf[str(index)].value
       single_layer_features = feature_stack[elmo_layer]
-      # tokenized_sent = subword_tokenizer.wordpiece_tokenizer.tokenize('[CLS] ' + ' '.join(observation.sentence) + ' [SEP]')
-      tokenized_sent = subword_tokenizer.wordpiece_tokenizer.tokenize(' '.join(observation.sentence))
+      tokenized_sent = subword_tokenizer.wordpiece_tokenizer.tokenize('[CLS] ' + ' '.join(observation.sentence) + ' [SEP]')
       untokenized_sent = observation.sentence
       untok_tok_mapping = self.match_tokenized_to_untokenized(tokenized_sent, untokenized_sent)
       
-      if index < 10:
+      if index < 5:
+        print(' ')
         print('round 1')
         print(single_layer_features.shape)
         print(len(tokenized_sent))
@@ -407,7 +407,8 @@ class BERTDataset(SubwordDataset):
       assert single_layer_features.shape[0] == len(tokenized_sent)
       single_layer_features = torch.tensor([np.mean(single_layer_features[untok_tok_mapping[i][0]:untok_tok_mapping[i][-1]+1,:], axis=0) for i in range(len(untokenized_sent))])
       
-      if index < 10:
+      if index < 5:
+        print(' ')
         print('round 2')
         print(single_layer_features.shape)
         print(len(observation.sentence))
