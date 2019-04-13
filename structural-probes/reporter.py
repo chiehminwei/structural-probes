@@ -91,7 +91,7 @@ class WordPairReporter(Reporter):
     Then computes the average Spearman across sentence lengths 5 to 50;
     writes this average to disk.
 
-    Args:
+    Args: 
       prediction_batches: A sequence of batches of predictions for a data split
       dataset: A sequence of batches of Observations
       split_name the string naming the data split: {train,dev,test}
@@ -106,7 +106,7 @@ class WordPairReporter(Reporter):
         length = int(length)
         prediction = prediction[:length,:length]
         label = label[:length,:length]
-        spearmanrs = [spearmanr(pred, gold) for pred, gold in zip(prediction, label)]
+        spearmanrs = [spearmanr(pred.cpu(), gold.cpu()) for pred, gold in zip(prediction, label)]
         lengths_to_spearmanrs[length].extend([x.correlation for x in spearmanrs])
     mean_spearman_for_each_length = {length: np.mean(lengths_to_spearmanrs[length]) 
         for length in lengths_to_spearmanrs}
@@ -193,8 +193,8 @@ class WordPairReporter(Reporter):
         poses = observation.xpos_sentence
         length = int(length)
         assert length == len(observation.sentence)
-        prediction = prediction[:length,:length]
-        label = label[:length,:length]
+        prediction = prediction[:length,:length].cpu()
+        label = label[:length,:length].cpu()
 
         gold_edges = prims_matrix_to_edges(label, words, poses)
         pred_edges = prims_matrix_to_edges(prediction, words, poses)
@@ -265,8 +265,8 @@ class WordReporter(Reporter):
           length_batch, observation_batch):
         words = observation.sentence
         length = int(length)
-        prediction = prediction[:length]
-        label = label[:length]
+        prediction = prediction[:length].cpu()
+        label = label[:length].cpu()
         sent_spearmanr = spearmanr(prediction, label)
         lengths_to_spearmanrs[length].append(sent_spearmanr.correlation)
     mean_spearman_for_each_length = {length: np.mean(lengths_to_spearmanrs[length]) 
@@ -304,7 +304,7 @@ class WordReporter(Reporter):
           length_batch, observation_batch):
         length = int(length)
         label = list(label[:length])
-        prediction = prediction.data[:length]
+        prediction = prediction.data[:length].cpu()
         words = observation.sentence
         poses = observation.xpos_sentence
 
