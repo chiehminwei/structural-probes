@@ -49,14 +49,16 @@ class ProbeRegimen:
     self.set_optimizer(probe)
     min_dev_loss = sys.maxsize
     min_dev_loss_epoch = -1
-    for epoch_index in tqdm(range(self.max_epochs), desc='[training]'):
+    # for epoch_index in tqdm(range(self.max_epochs), desc='[training]'):
+    for epoch_index in range(self.max_epochs):
       epoch_train_loss = 0
       epoch_dev_loss = 0
       epoch_train_epoch_count = 0
       epoch_dev_epoch_count = 0
       epoch_train_loss_count = 0
       epoch_dev_loss_count = 0
-      for batch in tqdm(train_dataset, desc='[training batch]'):
+      # for batch in tqdm(train_dataset, desc='[training batch]'):
+      for batch in train_dataset:
         probe.train()
         self.optimizer.zero_grad()
         observation_batch, label_batch, length_batch, _ = batch
@@ -68,7 +70,8 @@ class ProbeRegimen:
         epoch_train_epoch_count += 1
         epoch_train_loss_count += count.detach().cpu().numpy()
         self.optimizer.step()
-      for batch in tqdm(dev_dataset, desc='[dev batch]'):
+      # for batch in tqdm(dev_dataset, desc='[dev batch]'):
+      for batch in dev_dataset:
         self.optimizer.zero_grad()
         probe.eval()
         observation_batch, label_batch, length_batch, _ = batch
@@ -102,7 +105,8 @@ class ProbeRegimen:
     """
     probe.eval()
     predictions_by_batch = []
-    for batch in tqdm(dataset, desc='[predicting]'):
+    # for batch in tqdm(dataset, desc='[predicting]'):
+    for batch in dataset:
       observation_batch, label_batch, length_batch, _ = batch
       word_representations = model(observation_batch)
       predictions = probe(word_representations)
