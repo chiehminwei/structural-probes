@@ -12,7 +12,7 @@ See the [blog post on structural probes](https://nlp.stanford.edu//~johnhew//str
 
 ## Performance
 
-| Span <td colspan=2>Distance  <td colspan=2>Depth|
+| Span                  |<td colspan=2>Distance|  <td colspan=2>Depth|
 | Method                |   UUAS  | DSpr. |  Root% |   NSpr. |
 |-----------------------|---------|-------|--------|---------|
 | base7  (Eng baseline)*|   79.8  |  0.85 |   88.0 |   0.87  |
