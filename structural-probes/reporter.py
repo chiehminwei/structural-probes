@@ -138,6 +138,7 @@ class WordPairReporter(Reporter):
         length = int(length)
         prediction = prediction[:length,:length]
         label = label[:length,:length]
+        label = label.cpu().numpy()
         words = observation.sentence
         fontsize = 5*( 1 + np.sqrt(len(words))/200)
         plt.clf()
