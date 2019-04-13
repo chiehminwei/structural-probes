@@ -195,7 +195,7 @@ class WordPairReporter(Reporter):
         poses = observation.xpos_sentence
         length = int(length)
         assert length == len(observation.sentence)
-        prediction = prediction[:length,:length].cpu()
+        prediction = prediction[:length,:length]
         label = label[:length,:length].cpu()
 
         gold_edges = prims_matrix_to_edges(label, words, poses)
@@ -267,7 +267,7 @@ class WordReporter(Reporter):
           length_batch, observation_batch):
         words = observation.sentence
         length = int(length)
-        prediction = prediction[:length].cpu()
+        prediction = prediction[:length]
         label = label[:length].cpu()
         sent_spearmanr = spearmanr(prediction, label)
         lengths_to_spearmanrs[length].append(sent_spearmanr.correlation)
