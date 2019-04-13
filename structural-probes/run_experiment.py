@@ -174,9 +174,14 @@ def execute_experiment(args, train_probe, report_results):
   expt_regimen = regimen_class(args)
   expt_loss = loss_class(args)
 
+  start = datetime.now()
+  print('***Started training at {}***'.format(start))
   if train_probe:
     print('Training probe...')
     run_train_probe(args, expt_probe, expt_dataset, expt_model, expt_loss, expt_reporter, expt_regimen)
+  end = datetime.now() 
+  print('***Finished training at {}***'.format(end))
+  print('Training took {}s.'.format(end-start))
   if report_results:
     print('Reporting results of trained probe...')
     run_report_results(args, expt_probe, expt_dataset, expt_model, expt_loss, expt_reporter, expt_regimen)
