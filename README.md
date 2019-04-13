@@ -10,6 +10,25 @@ Based on the paper [A Structural Probe for Finding Syntax in Word Representation
 
 See the [blog post on structural probes](https://nlp.stanford.edu//~johnhew//structural-probe.html) for a brief introduction.
 
+## Performance
+
+|                       |    Distance     |     Depth        |
+| Method                |   UUAS  | DSpr. |  Root% |   NSpr. |
+|-----------------------|---------|-------|--------|---------|
+| base7  (Eng baseline)*|   79.8  |  0.85 |   88.0 |   0.87  |
+| base12 (sanity check) |   72.6  |  0.80 |   83.5 |   0.86  |
+|-----------------------|---------|-------|--------|---------|
+| large15 *             |   82.5  |  0.86 |   89.4 |   0.88  |
+| large16 *             |   81.7  |  0.87 |   90.1 |   0.89  |
+|-----------------------|---------|-------|--------|---------|
+| multi12 (baseline)    |   33395 |  4137 |   5249 |   42781 |
+| multi-syntactic12     |   72.3  |  0.86 |   90.7 |   0.87  |
+
+Results of structural probes on the PTB WSJ test. For the distance probes, we show the Undirected Unlabeled Attachment Score (UUAS) as well as the average Spearman correlation of true to predicted distances, DSpr. For the norm probes, we show the root prediction accuracy and the average Spearman correlation of true to predicted norms, NSpr.
+
+\* Results taken from paper.
+The representations we evaluate are denoted baseK, etc.,  where K indexes the hidden layer of the corresponding model. base12 is to check there's nothing wrong with my implementation. Its results roughly agree with Figure 1 in paper. base is the English 12 layer English model. large is the 24 layer English model. multi is the 12 layer multilingual model (there's no 24 layer multilingual model released). multi-syntactic is the multilingual model fine-tuned on multilingual UD dependency parsing.
+
 ## Installing & Getting Started
 
 1. Clone the repository.
