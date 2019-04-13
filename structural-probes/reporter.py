@@ -107,7 +107,7 @@ class WordPairReporter(Reporter):
         prediction = prediction[:length,:length]
         label = label[:length,:length]
 
-        label = label.cpu()
+        label = label.cpu().numpy()
         print(type(label))
         print(type(label[0]))
         print(label)
