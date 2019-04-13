@@ -12,7 +12,7 @@ See the [blog post on structural probes](https://nlp.stanford.edu//~johnhew//str
 
 ## Performance
 
-| Method                |   UUAS    DSpr. |  Root%     NSpr. |
+| Method                |   UUAS  | DSpr. |  Root% |   NSpr. |
 |-----------------------|---------|-------|--------|---------|
 | base7  (Eng baseline)*|   79.8  |  0.85 |   88.0 |   0.87  |
 | base12 (sanity check) |   72.6  |  0.80 |   83.5 |   0.86  |
