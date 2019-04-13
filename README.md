@@ -23,8 +23,9 @@ See the [blog post on structural probes](https://nlp.stanford.edu//~johnhew//str
 
 Results of structural probes on the PTB WSJ test. For the distance probes, we show the Undirected Unlabeled Attachment Score (UUAS) as well as the average Spearman correlation of true to predicted distances, DSpr. For the norm probes, we show the root prediction accuracy and the average Spearman correlation of true to predicted norms, NSpr.
 
-\* Results taken from paper.
 The representations we evaluate are denoted baseK, etc.,  where K indexes the hidden layer of the corresponding model. base12 is to check there's nothing wrong with my implementation. Its results roughly agree with Figure 1 in paper. base is the English 12 layer English model. large is the 24 layer English model. multi is the 12 layer multilingual model (there's no 24 layer multilingual model released). multi-syntactic is the multilingual model fine-tuned on multilingual UD dependency parsing.
+
+\* Results taken from paper.
 
 ## Installing & Getting Started
 
