@@ -306,7 +306,7 @@ class WordReporter(Reporter):
           length_batch, observation_batch):
         length = int(length)
         label = list(label[:length])
-        prediction = prediction.data[:length].cpu()
+        prediction = prediction.data[:length]
         words = observation.sentence
         poses = observation.xpos_sentence
 
