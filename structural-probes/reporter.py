@@ -107,11 +107,9 @@ class WordPairReporter(Reporter):
         prediction = prediction[:length,:length]
         label = label[:length,:length]
 
-        print(type(prediction))
+        label = label.cpu()
         print(type(label))
-        print(type(prediction[0]))
         print(type(label[0]))
-        print(prediction)
         print(label)
 
         spearmanrs = [spearmanr(pred, gold) for pred, gold in zip(prediction, label)]
