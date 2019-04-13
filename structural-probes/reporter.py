@@ -106,7 +106,15 @@ class WordPairReporter(Reporter):
         length = int(length)
         prediction = prediction[:length,:length]
         label = label[:length,:length]
-        spearmanrs = [spearmanr(pred, gold.cpu()) for pred, gold in zip(prediction, label)]
+
+        print(type(prediction))
+        print(type(label))
+        print(type(prediction[0]))
+        print(type(label[0]))
+        print(prediction)
+        print(label)
+
+        spearmanrs = [spearmanr(pred, gold) for pred, gold in zip(prediction, label)]
         lengths_to_spearmanrs[length].extend([x.correlation for x in spearmanrs])
     mean_spearman_for_each_length = {length: np.mean(lengths_to_spearmanrs[length]) 
         for length in lengths_to_spearmanrs}
