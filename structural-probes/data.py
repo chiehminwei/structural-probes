@@ -397,22 +397,22 @@ class BERTDataset(SubwordDataset):
       untokenized_sent = observation.sentence
       untok_tok_mapping = self.match_tokenized_to_untokenized(tokenized_sent, untokenized_sent)
       
-      # if index < 5:
-      #   print(' ')
-      #   print('Sentence {}, tokens'.format(index))
-      #   print(tokenized_sent)
-      #   print('tokenized sentence length: {}'.format(len(tokenized_sent)))
-      #   print('feature shape: {}'.format(single_layer_features.shape))
+      if index < 5:
+        print(' ')
+        print('Sentence {}, tokens'.format(index))
+        print(tokenized_sent)
+        print('tokenized sentence length: {}'.format(len(tokenized_sent)))
+        print('feature shape: {}'.format(single_layer_features.shape))
         
       assert single_layer_features.shape[0] == len(tokenized_sent)
       single_layer_features = torch.tensor([np.mean(single_layer_features[untok_tok_mapping[i][0]:untok_tok_mapping[i][-1]+1,:], axis=0) for i in range(len(untokenized_sent))])
       
-      # if index < 5:
-      #   print(' ')
-      #   print('Sentence {}, after joining'.format(index))
-      #   print(observation.sentence)
-      #   print('sentence length: {}'.format(len(observation.sentence)))
-      #   print('feature shape: {}'.format(single_layer_features.shape))
+      if index < 5:
+        print(' ')
+        print('Sentence {}, after joining'.format(index))
+        print(observation.sentence)
+        print('sentence length: {}'.format(len(observation.sentence)))
+        print('feature shape: {}'.format(single_layer_features.shape))
 
       
       assert single_layer_features.shape[0] == len(observation.sentence)
