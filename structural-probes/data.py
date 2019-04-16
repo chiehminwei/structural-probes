@@ -369,6 +369,8 @@ class BERTDataset(SubwordDataset):
           to downloading of prespecifed tokenizer problem. Not recoverable;
           exits immediately.
     '''
+    debugging = False
+    
     if subword_tokenizer == None:
       try:
         from pytorch_pretrained_bert import BertTokenizer
@@ -397,7 +399,7 @@ class BERTDataset(SubwordDataset):
       untokenized_sent = observation.sentence
       untok_tok_mapping = self.match_tokenized_to_untokenized(tokenized_sent, untokenized_sent)
       
-      if index < 5:
+      if index < 5 and debugging:
         print(' ')
         print('Sentence {}, tokens'.format(index))
         print(tokenized_sent)
@@ -407,7 +409,7 @@ class BERTDataset(SubwordDataset):
       assert single_layer_features.shape[0] == len(tokenized_sent)
       single_layer_features = torch.tensor([np.mean(single_layer_features[untok_tok_mapping[i][0]:untok_tok_mapping[i][-1]+1,:], axis=0) for i in range(len(untokenized_sent))])
       
-      if index < 5:
+      if index < 5 and debugging:
         print(' ')
         print('Sentence {}, after joining'.format(index))
         print(observation.sentence)
