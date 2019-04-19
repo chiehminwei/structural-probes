@@ -17,10 +17,10 @@ See the [blog post on structural probes](https://nlp.stanford.edu//~johnhew//str
 | base7 *               |   79.8  |  0.85 |   88.0 |   0.87  |
 | large15*              |   82.5  |  0.86 |   89.4 |   0.88  |
 | large16*              |   81.7  |  0.87 |   90.1 |   0.89  |
-| multi-original        |   80.4  |  0.86 |   90.0 |   0.88  |
-| multi-syntactic7      |   81.0  |  0.85 |   91.5 |   0.88  |
-| multi-syntactic8      |   81.0  |  0.86 |   91.1 |   0.88  |
-| multi-syntactic8(80%) |   81.3  |  0.86 |   91.5 |   0.88  |
+| multi-original7       |   80.45 |  0.856|   90.00|   0.884 |
+| multi-syntactic7      |   81.04 |  0.852|   91.53|   0.876 |
+| multi-syntactic8      |   80.97 |  0.859|   91.06|   0.879 |
+| multi-syntactic8(80%) |   81.26 |  0.861|   91.53|   0.882 |
 
 Results of structural probes on the PTB WSJ test. For the distance probes, we show the Undirected Unlabeled Attachment Score (UUAS) as well as the average Spearman correlation of true to predicted distances, DSpr. For the norm probes, we show the root prediction accuracy and the average Spearman correlation of true to predicted norms, NSpr.
 
