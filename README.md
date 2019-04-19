@@ -12,7 +12,7 @@ See the [blog post on structural probes](https://nlp.stanford.edu//~johnhew//str
 
 ## Performance
 
-# English PTB test
+# Trained and tested on English PTB
 | Method                |   UUAS  | DSpr. |  Root% |   NSpr. |
 |-----------------------|---------|-------|--------|---------|
 | base7*                |   79.8  |  0.85 |   88.0 |   0.87  |
@@ -21,11 +21,17 @@ See the [blog post on structural probes](https://nlp.stanford.edu//~johnhew//str
 | multi-original8       |   80.29 |  0.857|   88.41|   0.883 |
 | multi-syntactic9      |   81.73 |  0.862|   90.60|   0.876 |
 
-# Chinese GSD test
+# Trained and tested on Chinese GSD
 | Method                |   UUAS  | DSpr. |  Root% |   NSpr. |
 |-----------------------|---------|-------|--------|---------|
 | multi-original8       |   66.23 |  0.802|   56.20|   0.831 |
 | multi-syntactic9      |   59.91 |  0.787|   50.40|   0.774 |
+
+# Trained on English PTB, tested on Chinese GSD
+| Method                |   UUAS  | DSpr. |  Root% |   NSpr. |
+|-----------------------|---------|-------|--------|---------|
+| multi-original8       |   50.04 |  0.684|   16.20|   0.481 |
+| multi-syntactic9      |   50.57 |  0.673|   34.80|   0.566 |
 
 
 Results of structural probes. For the distance probes, we show the Undirected Unlabeled Attachment Score (UUAS) as well as the average Spearman correlation of true to predicted distances, DSpr. For the norm probes, we show the root prediction accuracy and the average Spearman correlation of true to predicted norms, NSpr.
