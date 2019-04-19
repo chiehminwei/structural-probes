@@ -27,6 +27,9 @@ See the [blog post on structural probes](https://nlp.stanford.edu//~johnhew//str
 | Method                |   UUAS  | DSpr. |  Root% |   NSpr. |
 |-----------------------|---------|-------|--------|---------|
 | multi-original8       |   64.12 |  0.782|   ??.??|   ?.??? |
+| multi-syntactic9      |   60.55 |  0.788|   ??.??|   ?.??? |
+
+* only Chinese multi-syntactic9 is tested on test set, all the others are dev set.
 
 Results of structural probes on the PTB WSJ test. For the distance probes, we show the Undirected Unlabeled Attachment Score (UUAS) as well as the average Spearman correlation of true to predicted distances, DSpr. For the norm probes, we show the root prediction accuracy and the average Spearman correlation of true to predicted norms, NSpr.
 
