@@ -14,16 +14,21 @@ See the [blog post on structural probes](https://nlp.stanford.edu//~johnhew//str
 
 | Method                |   UUAS  | DSpr. |  Root% |   NSpr. |
 |-----------------------|---------|-------|--------|---------|
-| base7  (Eng baseline)*|   79.8  |  0.85 |   88.0 |   0.87  |
-| base12 (sanity check) |   72.6  |  0.80 |   83.5 |   0.86  |
+| base7 *               |   79.8  |  0.85 |   88.0 |   0.87  |
 | large15*              |   82.5  |  0.86 |   89.4 |   0.88  |
 | large16*              |   81.7  |  0.87 |   90.1 |   0.89  |
-| multi12 (baseline)    |   68.7  |  0.79 |   82.2 |   0.85  |
-| multi-syntactic12     |   72.3  |  0.86 |   90.7 |   0.87  |
+| multi-original        |   80.4  |  0.86 |   90.0 |   0.88  |
+| multi-syntactic7      |   81.0  |  0.85 |   91.5 |   0.88  |
+| multi-syntactic8      |   81.0  |  0.86 |   91.1 |   0.88  |
+| multi-syntactic6(80%) |   81.3  |  0.86 |   91.5 |   0.88  |
 
 Results of structural probes on the PTB WSJ test. For the distance probes, we show the Undirected Unlabeled Attachment Score (UUAS) as well as the average Spearman correlation of true to predicted distances, DSpr. For the norm probes, we show the root prediction accuracy and the average Spearman correlation of true to predicted norms, NSpr.
 
-The representations we evaluate are denoted baseK, etc.,  where K indexes the hidden layer of the corresponding model. base12 is to check there's nothing wrong with my implementation. Its results roughly agree with Figure 1 in paper. base is the English 12 layer English model. large is the 24 layer English model. multi is the 12 layer multilingual model (there's no 24 layer multilingual model released). multi-syntactic is the multilingual model fine-tuned on multilingual UD dependency parsing.
+The representations we evaluate are denoted baseK, etc.,  where K indexes the hidden layer of the corresponding model.
+base is the English 12 layer English model. 
+large is the 24 layer English model. 
+multi is the 12 layer multilingual model (there's no 24 layer multilingual model released). 
+multi-syntactic is the multilingual model fine-tuned on multilingual UD dependency parsing.
 
 \* Results taken from paper.
 
