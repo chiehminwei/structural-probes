@@ -369,7 +369,7 @@ class BERTDataset(SubwordDataset):
           to downloading of prespecifed tokenizer problem. Not recoverable;
           exits immediately.
     '''
-    debugging = False
+    debugging = True
     
     if subword_tokenizer == None:
       try:
