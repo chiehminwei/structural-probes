@@ -12,31 +12,31 @@ See the [blog post on structural probes](https://nlp.stanford.edu//~johnhew//str
 
 ## Performance
 
-# English PTB
+# English PTB test
 | Method                |   UUAS  | DSpr. |  Root% |   NSpr. |
 |-----------------------|---------|-------|--------|---------|
 | base7*                |   79.8  |  0.85 |   88.0 |   0.87  |
 | large15*              |   82.5  |  0.86 |   89.4 |   0.88  |
 | large16*              |   81.7  |  0.87 |   90.1 |   0.89  |
-| multi-original8       |   80.45 |  0.856|   90.00|   0.884 |
-| multi-syntactic8      |   81.04 |  0.852|   91.53|   0.876 |
-| multi-syntactic9      |   80.97 |  0.859|   91.06|   0.879 |
-| multi-syntactic9(80%) |   81.26 |  0.861|   91.53|   0.882 |
+| multi-original8       |   80.29 |  0.857|   88.41|   0.883 |
+| multi-syntactic9      |   81.73 |  0.862|   90.60|   0.876 |
 
-# Chinese GSD
+# Chinese GSD test
 | Method                |   UUAS  | DSpr. |  Root% |   NSpr. |
 |-----------------------|---------|-------|--------|---------|
-| multi-original8       |   64.12 |  0.782|   ??.??|   ?.??? |
-| multi-syntactic9      |   60.55 |  0.788|   ??.??|   ?.??? |
+| multi-original8       |   66.23 |  0.802|   56.20|   0.831 |
+| multi-syntactic9      |   59.91 |  0.787|   50.40|   0.774 |
 
-* only Chinese multi-syntactic9 is tested on test set, all the others are dev set.
 
-Results of structural probes on the PTB WSJ test. For the distance probes, we show the Undirected Unlabeled Attachment Score (UUAS) as well as the average Spearman correlation of true to predicted distances, DSpr. For the norm probes, we show the root prediction accuracy and the average Spearman correlation of true to predicted norms, NSpr.
+Results of structural probes. For the distance probes, we show the Undirected Unlabeled Attachment Score (UUAS) as well as the average Spearman correlation of true to predicted distances, DSpr. For the norm probes, we show the root prediction accuracy and the average Spearman correlation of true to predicted norms, NSpr.
 
 The representations we evaluate are denoted baseK, etc.,  where K indexes the hidden layer of the corresponding model.
 base is the English 12 layer English model. 
+
 large is the 24 layer English model. 
+
 multi is the 12 layer multilingual model (there's no 24 layer multilingual model released). 
+
 multi-syntactic is the multilingual model fine-tuned on multilingual UD dependency parsing.
 
 \* Results taken from paper.
