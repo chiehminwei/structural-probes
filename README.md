@@ -12,7 +12,7 @@ See the [blog post on structural probes](https://nlp.stanford.edu//~johnhew//str
 
 ## Performance
 
-# Trained and tested on English PTB
+### Trained and tested on English PTB
 | Method                |   UUAS  | DSpr. |  Root% |   NSpr. |
 |-----------------------|---------|-------|--------|---------|
 | base7*                |   79.8  |  0.85 |   88.0 |   0.87  |
@@ -21,13 +21,13 @@ See the [blog post on structural probes](https://nlp.stanford.edu//~johnhew//str
 | multi-original8       |   80.29 |  0.857|   88.41|   0.883 |
 | multi-syntactic9      |   81.73 |  0.862|   90.60|   0.876 |
 
-# Trained and tested on Chinese GSD
+### Trained and tested on Chinese GSD
 | Method                |   UUAS  | DSpr. |  Root% |   NSpr. |
 |-----------------------|---------|-------|--------|---------|
 | multi-original8       |   66.23 |  0.802|   56.20|   0.831 |
 | multi-syntactic9      |   59.91 |  0.787|   50.40|   0.774 |
 
-# Trained on English PTB, tested on Chinese GSD
+### Trained on English PTB, tested on Chinese GSD
 | Method                |   UUAS  | DSpr. |  Root% |   NSpr. |
 |-----------------------|---------|-------|--------|---------|
 | multi-original8       |   50.04 |  0.684|   16.20|   0.481 |
