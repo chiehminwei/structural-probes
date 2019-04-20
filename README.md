@@ -26,6 +26,7 @@ See the [blog post on structural probes](https://nlp.stanford.edu//~johnhew//str
 |-----------------------|---------|-------|--------|---------|
 | multi-original8       |   66.23 |  0.802|   56.20|   0.831 |
 | multi-syntactic9      |   59.91 |  0.787|   50.40|   0.774 |
+| multi-original8(fixed) |  68.06 |  0.808|   58.20|   0.840 |
 | multi-syntactic9(fixed)|  77.64 |  0.862|   80.80|   0.868 |
 
 ### Trained on English PTB, tested on Chinese GSD
