@@ -374,16 +374,17 @@ class BERTDataset(SubwordDataset):
     if subword_tokenizer == None:
       try:
         from pytorch_pretrained_bert import BertTokenizer
-        if self.args['model']['hidden_dim'] == 768:
-          # subword_tokenizer = BertTokenizer.from_pretrained('bert-base-cased')
-          subword_tokenizer = BertTokenizer.from_pretrained('bert-base-multilingual-cased', do_lower_case=False)
-          print('Using BERT-base-multilingual-cased tokenizer to align embeddings with PTB tokens')
-        elif self.args['model']['hidden_dim'] == 1024:
-          subword_tokenizer = BertTokenizer.from_pretrained('bert-large-cased')
-          print('Using BERT-large-cased tokenizer to align embeddings with PTB tokens')
-        else:
-          print("The heuristic used to choose BERT tokenizers has failed...")
-          exit()
+        subword_tokenizer = BertTokenizer.from_pretrained('bert-base-multilingual-cased', do_lower_case=False)
+        print('Using BERT-base-multilingual-cased tokenizer to align embeddings with PTB tokens')
+        # if self.args['model']['hidden_dim'] == 768:
+        #   subword_tokenizer = BertTokenizer.from_pretrained('bert-base-multilingual-cased', do_lower_case=False)
+        #   print('Using BERT-base-multilingual-cased tokenizer to align embeddings with PTB tokens')
+        # elif self.args['model']['hidden_dim'] == 1024:
+        #   subword_tokenizer = BertTokenizer.from_pretrained('bert-large-cased')
+        #   print('Using BERT-large-cased tokenizer to align embeddings with PTB tokens')
+        # else:
+        #   print("The heuristic used to choose BERT tokenizers has failed...")
+        #   exit()
       except:
         print('Couldn\'t import pytorch-pretrained-bert. Exiting...')
         exit()
