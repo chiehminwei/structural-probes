@@ -119,6 +119,7 @@ class WordPairReporter(Reporter):
     with open(os.path.join(self.reporting_root, split_name + '.spearmanr-5_50-mean'), 'w') as fout:
       mean = np.mean([mean_spearman_for_each_length[x] for x in range(5,51) if x in mean_spearman_for_each_length])
       fout.write(str(mean) + '\n')
+      print('spearmanr-5_50-mean: ', mean)
 
   def report_image_examples(self, prediction_batches, dataset, split_name):
     """Writes predicted and gold distance matrices to disk for the first 20
@@ -211,6 +212,7 @@ class WordPairReporter(Reporter):
     uuas = uspan_correct / float(uspan_total)
     with open(os.path.join(self.reporting_root, split_name + '.uuas'), 'w') as fout:
       fout.write(str(uuas) + '\n')
+      print('uuas: ', uuas)
 
   def print_tikz(self, prediction_edges, gold_edges, words, split_name):
     ''' Turns edge sets on word (nodes) into tikz dependency LaTeX. '''
@@ -281,6 +283,7 @@ class WordReporter(Reporter):
     with open(os.path.join(self.reporting_root, split_name + '.spearmanr-5_50-mean'), 'w') as fout:
       mean = np.mean([mean_spearman_for_each_length[x] for x in range(5,51) if x in mean_spearman_for_each_length])
       fout.write(str(mean) + '\n')
+      print('spearmanr-5_50-mean: ', mean)
 
   def report_root_acc(self, prediction_batches, dataset, split_name):
     """Computes the root prediction accuracy and writes to disk.
@@ -316,6 +319,7 @@ class WordReporter(Reporter):
     root_acc = correct_root_predictions / float(total_sents)
     with open(os.path.join(self.reporting_root, split_name + '.root_acc'), 'w') as fout:
       fout.write('\t'.join([str(root_acc), str(correct_root_predictions), str(total_sents)]) + '\n')
+      print('root_acc: ', root_acc)
 
   def report_image_examples(self, prediction_batches, dataset, split_name):
     """Writes predicted and gold depths to disk for the first 20

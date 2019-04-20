@@ -20,6 +20,8 @@ See the [blog post on structural probes](https://nlp.stanford.edu//~johnhew//str
 | large16*              |   81.7  |  0.87 |   90.1 |   0.89  |
 | multi-original8       |   80.29 |  0.857|   88.41|   0.883 |
 | multi-syntactic9      |   81.73 |  0.862|   90.60|   0.876 |
+| multi-original8(fixed)|   81.11 |  0.862|   89.65|   0.887 |
+| multi-syntactic9(fixed)|   81.73 |  0.862|   90.60|   0.876 |
 
 ### Trained and tested on Chinese GSD
 | Method                |   UUAS  | DSpr. |  Root% |   NSpr. |
