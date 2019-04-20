@@ -30,6 +30,9 @@ See the [blog post on structural probes](https://nlp.stanford.edu//~johnhew//str
 | multi-syntactic9      |   59.91 |  0.787|   50.40|   0.774 |
 | multi-original8(fixed) |  68.06 |  0.808|   58.20|   0.840 |
 | multi-syntactic9(fixed)|  77.64 |  0.862|   80.80|   0.868 |
+| multi-syntactic9(first)|  76.93 |  0.861|   83.40|   0.872 |
+| multi-syntactic-concat |  61.23 |  0.842|   85.20|   0.857 |
+
 
 ### Trained on English PTB, tested on Chinese GSD
 | Method                |   UUAS  | DSpr. |  Root% |   NSpr. |
