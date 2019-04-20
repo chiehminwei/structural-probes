@@ -24,7 +24,7 @@ dataset:
     test_path: test.bert-layers.hdf5
   batch_size: 20
 model:
-  hidden_dim: 768 # base 768, large 1024
+  hidden_dim: 1200 # base 768, large 1024
   #embedding_dim: 1024 # ignored
   model_type: ELMo-disk # BERT-disk, ELMo-disk, 
   use_disk: True
@@ -32,7 +32,7 @@ model:
 probe:
   task_signature: word_pair # word, word_pair
   task_name: parse-distance
-  maximum_rank: 768 # base 768, large 1024
+  maximum_rank: 1200 # base 768, large 1024
   psd_parameters: True
   diagonal: False # ignored
   params_path: predictor.params
