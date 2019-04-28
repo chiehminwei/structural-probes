@@ -19,9 +19,9 @@ dataset:
   embeddings:
     type: subword #{token,subword}, ignored
     root: data/ 
-    train_path: train.bert-layers.hdf50
-    dev_path: dev.bert-layers.hdf50
-    test_path: test.bert-layers.hdf50
+    train_path: train.bert-layers.hdf511
+    dev_path: dev.bert-layers.hdf511
+    test_path: test.bert-layers.hdf511
   batch_size: 20
 model:
   hidden_dim: 768 # base 768, large 1024
@@ -30,8 +30,8 @@ model:
   use_disk: True
   model_layer: 0 # BERT-base: {1,...,12}; ELMo: {1,2,3}
 probe:
-  task_signature: word_pair # word, word_pair
-  task_name: parse-distance
+  task_signature: word # word, word_pair
+  task_name: parse-depth
   maximum_rank: 768 # base 768, large 1024
   psd_parameters: True
   diagonal: False # ignored
@@ -52,4 +52,4 @@ reporting:
   reporting_methods:
     - spearmanr
     - image_examples
-    - uuas
+    - root_acc

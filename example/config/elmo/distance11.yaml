@@ -19,9 +19,9 @@ dataset:
   embeddings:
     type: subword #{token,subword}, ignored
     root: data/ 
-    train_path: train.bert-layers.hdf50
-    dev_path: dev.bert-layers.hdf50
-    test_path: test.bert-layers.hdf50
+    train_path: train.bert-layers.hdf511
+    dev_path: dev.bert-layers.hdf511
+    test_path: test.bert-layers.hdf511
   batch_size: 20
 model:
   hidden_dim: 768 # base 768, large 1024

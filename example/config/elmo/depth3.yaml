@@ -19,16 +19,16 @@ dataset:
   embeddings:
     type: subword #{token,subword}, ignored
     root: data/ 
-    train_path: train.bert-layers.hdf5
-    dev_path: dev.bert-layers.hdf5
-    test_path: test.bert-layers.hdf5
+    train_path: train.bert-layers.hdf53
+    dev_path: dev.bert-layers.hdf53
+    test_path: test.bert-layers.hdf53
   batch_size: 20
 model:
   hidden_dim: 768 # base 768, large 1024
   #embedding_dim: 1024 # ignored
   model_type: ELMo-disk # BERT-disk, ELMo-disk, 
   use_disk: True
-  model_layer: 3 # BERT-base: {1,...,12}; ELMo: {1,2,3}
+  model_layer: 0 # BERT-base: {1,...,12}; ELMo: {1,2,3}
 probe:
   task_signature: word # word, word_pair
   task_name: parse-depth
