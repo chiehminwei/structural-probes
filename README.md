@@ -55,8 +55,11 @@ See the [blog post on structural probes](https://nlp.stanford.edu//~johnhew//str
 | 8      |   80.29 |  0.848|   88.41|   0.878 |95.02|
 | 9      |   79.38 |  0.847|   87.65|   0.878 |95.12|
 | 10     |   76.71 |  0.834|   85.41|   0.873 |95.06|
-| 11     |   xx.xx |  x.xxx|   84.53|   0.867 |94.94|
-| 12     |   xx.xx |  x.xxx|   83.41|   0.858 |94.82|
+| 11     |   74.09 |  0.818|   84.53|   0.867 |94.94|
+| 12     |   72.52 |  0.805|   83.41|   0.858 |94.82|
+
+9>10>8>11>7>12>6>5
+
 
 
 Results of structural probes. For the distance probes, we show the Undirected Unlabeled Attachment Score (UUAS) as well as the average Spearman correlation of true to predicted distances, DSpr. For the norm probes, we show the root prediction accuracy and the average Spearman correlation of true to predicted norms, NSpr.
