@@ -43,20 +43,20 @@ See the [blog post on structural probes](https://nlp.stanford.edu//~johnhew//str
 
 
 ### BERT-base-cased tested on English PTB
-| Layer  |   UUAS  | DSpr. |  Root% |   NSpr. |
-|--------|---------|-------|--------|---------|
-| 1      |   xx.xx |  x.xxx|   xx.xx|   x.xxx |
-| 2      |   62.73 |  0.752|   71.53|   0.784 |
-| 3      |   66.47 |  0.767|   71.94|   0.794 |
-| 4      |   72.31 |  0.793|   76.71|   0.821 |
-| 5      |   76.27 |  0.812|   82.76|   0.842 |
-| 6      |   79.22 |  0.830|   85.65|   0.858 |
-| 7      |   80.22 |  0.840|   87.29|   0.867 |
-| 8      |   80.29 |  0.848|   88.41|   0.878 |
-| 9      |   79.38 |  0.847|   87.65|   0.878 |
-| 10     |   76.71 |  0.834|   85.41|   0.873 |
-| 11     |   xx.xx |  x.xxx|   84.53|   0.867 |
-| 12     |   xx.xx |  x.xxx|   83.41|   0.858 |
+| Layer  |   UUAS  | DSpr. |  Root% |   NSpr. | F1  |
+|--------|---------|-------|--------|---------|-----|
+| 1      |   xx.xx |  x.xxx|   xx.xx|   x.xxx |91.93|
+| 2      |   62.73 |  0.752|   71.53|   0.784 |92.75|
+| 3      |   66.47 |  0.767|   71.94|   0.794 |93.28|
+| 4      |   72.31 |  0.793|   76.71|   0.821 |93.63|
+| 5      |   76.27 |  0.812|   82.76|   0.842 |94.09|
+| 6      |   79.22 |  0.830|   85.65|   0.858 |94.61|
+| 7      |   80.22 |  0.840|   87.29|   0.867 |94.89|
+| 8      |   80.29 |  0.848|   88.41|   0.878 |95.02|
+| 9      |   79.38 |  0.847|   87.65|   0.878 |95.12|
+| 10     |   76.71 |  0.834|   85.41|   0.873 |95.06|
+| 11     |   xx.xx |  x.xxx|   84.53|   0.867 |94.94|
+| 12     |   xx.xx |  x.xxx|   83.41|   0.858 |94.82|
 
 
 Results of structural probes. For the distance probes, we show the Undirected Unlabeled Attachment Score (UUAS) as well as the average Spearman correlation of true to predicted distances, DSpr. For the norm probes, we show the root prediction accuracy and the average Spearman correlation of true to predicted norms, NSpr.
