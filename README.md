@@ -45,7 +45,7 @@ See the [blog post on structural probes](https://nlp.stanford.edu//~johnhew//str
 ### BERT-base-cased tested on English PTB
 | Layer  |   UUAS  | DSpr. |  Root% |   NSpr. | F1  |
 |--------|---------|-------|--------|---------|-----|
-| 1      |   xx.xx |  x.xxx|   xx.xx|   x.xxx |91.93|
+| 1      |   55.95 |  0.711|   60.00|   0.716 |91.93|
 | 2      |   62.73 |  0.752|   71.53|   0.784 |92.75|
 | 3      |   66.47 |  0.767|   71.94|   0.794 |93.28|
 | 4      |   72.31 |  0.793|   76.71|   0.821 |93.63|
@@ -58,7 +58,8 @@ See the [blog post on structural probes](https://nlp.stanford.edu//~johnhew//str
 | 11     |   74.09 |  0.818|   84.53|   0.867 |94.94|
 | 12     |   72.52 |  0.805|   83.41|   0.858 |94.82|
 
-9>10>8>11>7>12>6>5
+F1:  9>10>8>11>7>12>6>5  >   4>3>2>1
+but: 8>7>9>6>10>5>11>12  >   4>3>2>1
 
 
 
