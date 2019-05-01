@@ -59,9 +59,13 @@ See the [blog post on structural probes](https://nlp.stanford.edu//~johnhew//str
 | 12     |   72.52 |  0.805|   83.41|   0.858 |94.82|0.0014       |-0.0506    |0.07          |-5.21      |
 
 Sorted array from max to min (number in array means Layer #)
+
 F1 performance:  [9 10 8 11 7 12 6 5 4 3 2 1]
+
 Manning's score: [8 7 9 6 10 5 11 12 4 3 2 1]
+
 constituency weight: [9 8 7 6 10 2 4 11 5 1 3 12]
+
 dependency weight: [9 8 7 6 10 2 4 11 5 1 3 12]
 
 
