@@ -66,8 +66,7 @@ Manning's score: [8 7 9 6 10 5 11 12 4 3 2 1]
 
 constituency weight: [9 8 7 6 10 2 4 11 5 1 3 12]
 
-dependency weight: [9 8 7 6 10 2 4 11 5 1 3 12]
-
+dependency weight: [6 8 7 9 5 4 10 2 11 3 1 12]
 
 
 Results of structural probes. For the distance probes, we show the Undirected Unlabeled Attachment Score (UUAS) as well as the average Spearman correlation of true to predicted distances, DSpr. For the norm probes, we show the root prediction accuracy and the average Spearman correlation of true to predicted norms, NSpr.
